@@ -24,8 +24,6 @@ public class App {
 			else
 				return tipos.ISOSCELES.value();
 		}
-		
-		
 		return tipos.INVALIDO.value();
 	}
 

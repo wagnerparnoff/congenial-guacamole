@@ -40,7 +40,7 @@ public class AppTest
     {
         int actual = App.identificaTriangulo(6, 0, 9);
         int expected = tipos.INVALIDO.value();
-        assertEquals(expected, actual); 
+        assertEquals(expected, actual);
     }
 	
 	@Test
