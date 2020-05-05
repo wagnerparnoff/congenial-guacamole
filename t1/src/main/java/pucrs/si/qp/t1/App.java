@@ -21,7 +21,7 @@ public class App {
 		if ((a == 0) && (b == 0) && (c == 0)) {
 			return tipos.INVALIDO.value();
 		} else if ((a <= 0) || (b <= 0) || (c <= 0)) {
-			throw new RuntimeException("Valor inferior ou igual a zero.");
+			throw new RuntimeException("Valor menor ou igual a zero!");
 		} else {
 			if ((a < b + c) && (b < a + c) && (c < b + a)) {
 				if ((a == b) && (b == c))
@@ -41,6 +41,6 @@ public class App {
 	 */
 	public static void main(String[] args) {
 		System.out.println("Triângulos!");
-		System.out.println(identificaTriangulo(2, 3, 4));
+		System.out.println(identificaTriangulo(2, 2, 4));
 	}
 }

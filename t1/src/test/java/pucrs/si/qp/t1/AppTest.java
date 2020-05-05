@@ -51,11 +51,22 @@ public class AppTest
 	public void testEntradaZeroException()
 	{
 		try {
-			App.identificaTriangulo(0, 3, 4);
+			App.identificaTriangulo(8, 0, 9);
 		} catch(RuntimeException e) {
-			String message = " Valor menor ou igual a zero";
+			String message = "Valor menor ou igual a zero!";
 			assertEquals(message, e.getMessage());
 			
+		}
+	}
+	
+	@Test
+	public void testValorNegativo()
+	{
+		try {
+			App.identificaTriangulo(2, 3, -4);
+		}catch(RuntimeException e) {
+			String message = "Valor menor ou igual a zero!";
+			assertEquals(message, e.getMessage());
 		}
 	}
 	
