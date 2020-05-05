@@ -70,4 +70,24 @@ public class AppTest
 		}
 	}
 	
+	@Test
+	public void  testLinha()
+	{
+		int actual = App.identificaTriangulo(1, 2, 3);
+		int expected = tipos.NAOTRIANGULO.value();
+	}
+	
+	@Test
+	public void variantesDeSete()
+	{
+		int actual = App.identificaTriangulo(1, 2, 3);
+		int expected = tipos.NAOTRIANGULO.value();
+	}
+	
+	@Test
+	public void variantesDeSete2()
+	{
+		int actual = App.identificaTriangulo(3, 1, 2);
+		int expected = tipos.NAOTRIANGULO.value();
+	}
 }
