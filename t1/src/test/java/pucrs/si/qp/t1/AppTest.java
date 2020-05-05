@@ -46,13 +46,14 @@ public class AppTest
         assertEquals(expected, actual);
 	}
 	
+	/*
 	@Test
 	public void testEntradaZero()
 	{
 		int actual = App.identificaTriangulo(8, 0, 9);
         int expected = tipos.INVALIDO.value();
         assertEquals(expected, actual);
-	}
+	}*/
 	
 	@Test
 	public void testEntradaZeroException()
