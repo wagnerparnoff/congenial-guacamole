@@ -54,6 +54,16 @@ public class AppTest
         assertEquals(expected, actual);
 	}
 	
-	
+	@Test
+	public void testEntradaZeroException()
+	{
+		try {
+			App.identificaTriangulo(0, 3, 4);
+		} catch(RuntimeException e) {
+			String message = " Valor menor ou igual a zero";
+			assertEquals(message, e.getMessage());
+			
+		}
+	}
 	
 }
