@@ -20,6 +20,7 @@ public class AppTest
         int expected = tipos.EQUILATERO.value();
         assertEquals(expected, actual);
     }
+	
 	@Test
     public void testIsosceles()
     {
@@ -27,12 +28,22 @@ public class AppTest
         int expected = tipos.ISOSCELES.value();
         assertEquals(expected, actual);
     }
+	
+	
 	@Test
-    public void testInvalido()
-    {
-        int actual = App.identificaTriangulo(6, 6, -7);
-        int expected = tipos.INVALIDO.value();
+	public void testIsosceles2()
+	{
+		int actual = App.identificaTriangulo(6, 7, 6);
+        int expected = tipos.ISOSCELES.value();
         assertEquals(expected, actual);
-    }
+	}
+	
+	@Test
+	public void testIsosceles3() 
+	{
+		int actual = App.identificaTriangulo(7, 6, 6);
+        int expected = tipos.ISOSCELES.value();
+        assertEquals(expected, actual);
+	}
 	
 }
