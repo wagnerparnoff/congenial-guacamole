@@ -2,7 +2,7 @@ package pucrs.si.qp.t1;
 
 /**
  * 
- * @author marco.mangan@pucrs.br
+ * @author Pedro Sasso, Wagner Parnoff
  *
  */
 public enum tipos {

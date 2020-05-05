@@ -3,7 +3,7 @@ package pucrs.si.qp.t1;
 
 /**
  * 
- * @author marco.mangan@pucrs.br
+ * @author Pedro Sasso, Wagner Parnoff
  * 
  */
 public class App {
@@ -16,6 +16,11 @@ public class App {
 	 * @return
 	 */
 	public static int identificaTriangulo(int a, int b, int c) {
+		if ((a == 0) && (b==0) && (c==0)) {
+			return tipos.INVALIDO.value();			
+		}else if ((a <= 0) || (b <= 0) || (c <= 0)) {
+			throw new RuntimeException("Valor menor ou igual a zero");
+		}
 		if ((a < b + c) && (b < a + c) && (c < b + a)) {
 			if ((a == b) && (b == c))
 				return tipos.EQUILATERO.value();
@@ -33,6 +38,6 @@ public class App {
 	 */
 	public static void main(String[] args) {
 		System.out.println("Triângulos!");
-		System.out.println(identificaTriangulo(2, 3, 4));
+		System.out.println(identificaTriangulo(2, 2, 2));
 	}
 }
