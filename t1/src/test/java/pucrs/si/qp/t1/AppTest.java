@@ -35,36 +35,4 @@ public class AppTest
         assertEquals(expected, actual);
     }
 	
-	@Test
-    public void testZero()
-    {
-        int actual = App.identificaTriangulo(6, 0, 9);
-        int expected = tipos.INVALIDO.value();
-        assertEquals(expected, actual);
-    }
-	
-	@Test
-    public void testLinha()
-    {
-        int actual = App.identificaTriangulo(1, 2, 3);
-        int expected = tipos.NAOTRIANGULO.value();
-        assertEquals(expected, actual);
-    }
-
-	@Test
-    public void testNumParametros()
-    {
-        int actual = App.identificaTriangulo(1, 2, 3);
-        int expected = tipos.NAOTRIANGULO.value();
-        assertEquals(expected, actual);
-    }
-	
-	@Test
-    public void testDouble()
-    {
-        int actual = App.identificaTriangulo(1, 2, 3);
-        int expected = tipos.NAOTRIANGULO.value();
-        assertEquals(expected, actual);
-    }
-
 }
