@@ -46,28 +46,22 @@ public class AppTest
         assertEquals(expected, actual);
 	}
 	
+	//fim da base//
 	
 	@Test
 	public void testEntradaZeroException()
 	{
-		try {
-			App.identificaTriangulo(8, 0, 9);
-		} catch(RuntimeException e) {
-			String message = "Valor menor ou igual a zero!";
-			assertEquals(message, e.getMessage());
-			
-		}
+		int actual = App.identificaTriangulo(8, 0, 9);
+		int expected = tipos.INVALIDO.value();
+		assertEquals(expected, actual);
 	}
 	
 	@Test
 	public void testValorNegativo()
 	{
-		try {
-			App.identificaTriangulo(2, 3, -4);
-		}catch(RuntimeException e) {
-			String message = "Valor menor ou igual a zero!";
-			assertEquals(message, e.getMessage());
-		}
+		int actual = App.identificaTriangulo(2, 3, -4);
+		int expected = tipos.INVALIDO.value();
+		assertEquals(expected, actual);
 	}
 	
 	@Test
@@ -75,6 +69,7 @@ public class AppTest
 	{
 		int actual = App.identificaTriangulo(1, 2, 3);
 		int expected = tipos.NAOTRIANGULO.value();
+		assertEquals(expected, actual);
 	}
 	
 	@Test
@@ -82,6 +77,7 @@ public class AppTest
 	{
 		int actual = App.identificaTriangulo(1, 2, 3);
 		int expected = tipos.NAOTRIANGULO.value();
+		assertEquals(expected, actual);
 	}
 	
 	@Test
@@ -89,5 +85,40 @@ public class AppTest
 	{
 		int actual = App.identificaTriangulo(3, 1, 2);
 		int expected = tipos.NAOTRIANGULO.value();
+		assertEquals(expected, actual);
 	}
+	
+	
+	@Test
+	public void testLinhaLonga()
+	{
+		int actual = App.identificaTriangulo(1, 2, 8);
+		int expected = tipos.NAOTRIANGULO.value();
+		assertEquals(expected, actual);
+	}
+	
+	@Test
+	public void testLinhaLongaVariante()
+	{
+		int actual = App.identificaTriangulo(8, 2, 1);
+		int expected = tipos.NAOTRIANGULO.value();
+		assertEquals(expected, actual);
+	}
+	
+	@Test
+	public void testTudoZero()
+	{
+		int actual = App.identificaTriangulo(0, 0, 0);
+		int expected = tipos.NAOTRIANGULO.value();
+		assertEquals(expected, actual);
+	}
+	
+	@Test
+	public void testNumReais()
+	{
+		int actual = App.identificaTriangulo(0.5, 0.75, 5);
+		int expected = tipos.INVALIDO.value();
+		assertEquals(expected, actual);
+	}
+	
 }

@@ -19,9 +19,10 @@ public class App {
 
 	public static int identificaTriangulo(int a, int b, int c) {
 		if ((a == 0) && (b == 0) && (c == 0)) {
-			return tipos.INVALIDO.value();
+			return tipos.NAOTRIANGULO.value();
 		} else if ((a <= 0) || (b <= 0) || (c <= 0)) {
-			throw new RuntimeException("Valor menor ou igual a zero!");
+			//throw new IllegalArgumentException("Entrada inválida");
+			return tipos.INVALIDO.value();
 		} else {
 			if ((a < b + c) && (b < a + c) && (c < b + a)) {
 				if ((a == b) && (b == c))
@@ -30,6 +31,18 @@ public class App {
 					return tipos.ESCALENO.value();
 				else
 					return tipos.ISOSCELES.value();
+			}
+			
+			int varA = Math.abs(((a+b+c)/3)-a);
+			int varB = Math.abs(((a+b+c)/3)-b);
+			int varC = Math.abs(((a+b+c)/3)-c);
+			
+			if(varA > 2 || varB > 2 || varC > 2) {
+				//linha longa
+				return tipos.NAOTRIANGULO.value();
+			} else if (a + b == c || a + c == b || b + c ==a) {
+				//linha sequencial
+				return tipos.NAOTRIANGULO.value();
 			}
 			return tipos.INVALIDO.value();
 		}
@@ -42,5 +55,9 @@ public class App {
 	public static void main(String[] args) {
 		System.out.println("Triângulos!");
 		System.out.println(identificaTriangulo(2, 2, 4));
+	}
+
+	public static int identificaTriangulo(double d, double e, double f) {
+		return tipos.INVALIDO.value();
 	}
 }
